@@ -8,8 +8,9 @@ class FlutFlix extends StatelessWidget {
     return MaterialApp(
       title: 'FlutFlix',
       home: Scaffold(
-        backgroundColor:  Colors.deepOrange,
+        backgroundColor: Colors.deepOrange,
         appBar: AppBar(
+          title: Text('FlutFlix'),
         ),
       ),
     );
