@@ -15,34 +15,39 @@ class FlutFlix extends StatelessWidget {
         ),
         body: Center(
           child: Container(
-            color: Colors.green,
-            child: ListView.builder(
-              itemBuilder: (BuildContext context, int index) {
-                return Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
-                  child: Card(
-                    child: ListTile(
-                      title: Text(
-                        '$index ' + movies[index % 4],
-                      ),
-                      leading: CircleAvatar(
-                        child: Image.asset('data-repo/img/bg1.jpg'),
-                      ),
-                      trailing: IconButton(
-                        icon: Icon(
-                          Icons.movie_creation,
-                          color: (index % 2 == 0 ? Colors.deepPurple : Colors.purple),
+              color: Colors.green,
+              child: GridView.builder(
+                itemBuilder: (BuildContext context, int index) {
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 16.0, vertical: 16.0),
+                    child: Card(
+                      child: ListTile(
+                        title: Text(
+                          '$index ' + movies[index % 4],
                         ),
-                        onPressed: () {
-                          print('Pressed Icon Number $index');
-                        },
+                        leading: CircleAvatar(
+                          child: Image.asset('data-repo/img/bg1.jpg'),
+                        ),
+                        trailing: IconButton(
+                          icon: Icon(
+                            Icons.movie_creation,
+                            color: (index % 2 == 0
+                                ? Colors.deepPurple
+                                : Colors.purple),
+                          ),
+                          onPressed: () {
+                            print('Pressed Icon Number $index');
+                          },
+                        ),
                       ),
                     ),
-                  ),
-                );
-              },
-            ),
-          ),
+                  );
+                },
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                ),
+              )),
         ),
       ),
     );
