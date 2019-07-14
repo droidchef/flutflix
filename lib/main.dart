@@ -18,20 +18,23 @@ class FlutFlix extends StatelessWidget {
             color: Colors.green,
             child: ListView.builder(
               itemBuilder: (BuildContext context, int index) {
-                return Card(
-                  child: ListTile(
-                    title: Text(
-                      '$index ' + movies[index % 4],
-                    ),
-                    leading: CircleAvatar(
-                      child: Image.asset('data-repo/img/bg1.jpg'),
-                    ),
-                    trailing: IconButton(
-                      icon: Icon(
-                        Icons.movie_creation,
-                        color: (index % 2 == 0 ? Colors.deepPurple : Colors.purple),
+                return Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Card(
+                    child: ListTile(
+                      title: Text(
+                        '$index ' + movies[index % 4],
                       ),
-                      onPressed: () {},
+                      leading: CircleAvatar(
+                        child: Image.asset('data-repo/img/bg1.jpg'),
+                      ),
+                      trailing: IconButton(
+                        icon: Icon(
+                          Icons.movie_creation,
+                          color: (index % 2 == 0 ? Colors.deepPurple : Colors.purple),
+                        ),
+                        onPressed: () {},
+                      ),
                     ),
                   ),
                 );
