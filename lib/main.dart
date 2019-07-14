@@ -15,6 +15,13 @@ class FlutFlix extends StatelessWidget {
         body: Center(
           child: Container(
             color: Colors.green,
+            child: Row(
+              children: <Widget>[
+                Text('It\'s'),
+                Text('Go'),
+                Text('Time'),
+              ],
+            ),
           ),
         ),
       ),
