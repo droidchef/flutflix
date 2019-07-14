@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 void main() => runApp(FlutFlix());
 
 class FlutFlix extends StatelessWidget {
+  var movies = ['Alpha', 'Beta', 'Gamma', 'Delta'];
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,12 +16,14 @@ class FlutFlix extends StatelessWidget {
         body: Center(
           child: Container(
             color: Colors.green,
-            child: Column(
-              children: <Widget>[
-                Text('It\'s'),
-                Text('Go'),
-                Text('Time'),
-              ],
+            child: ListView.builder(
+              itemBuilder: (BuildContext context, int index) {
+                return ListTile(
+                  title: Text(
+                    '$index ' + movies[index % 4],
+                  ),
+                );
+              },
             ),
           ),
         ),
