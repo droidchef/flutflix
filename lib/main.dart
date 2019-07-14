@@ -26,6 +26,12 @@ class FlutFlix extends StatelessWidget {
                     leading: CircleAvatar(
                       child: Image.asset('data-repo/img/bg1.jpg'),
                     ),
+                    trailing: IconButton(
+                      icon: Icon(
+                        Icons.movie_creation,
+                      ),
+                      onPressed: () {},
+                    ),
                   ),
                 );
               },
