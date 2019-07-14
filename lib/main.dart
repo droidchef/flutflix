@@ -33,7 +33,9 @@ class FlutFlix extends StatelessWidget {
                           Icons.movie_creation,
                           color: (index % 2 == 0 ? Colors.deepPurple : Colors.purple),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          print('Pressed Icon Number $index');
+                        },
                       ),
                     ),
                   ),
