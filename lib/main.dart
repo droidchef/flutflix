@@ -29,6 +29,7 @@ class FlutFlix extends StatelessWidget {
                     trailing: IconButton(
                       icon: Icon(
                         Icons.movie_creation,
+                        color: Colors.cyan,
                       ),
                       onPressed: () {},
                     ),
