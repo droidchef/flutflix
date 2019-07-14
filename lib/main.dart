@@ -21,11 +21,15 @@ class FlutFlix extends StatelessWidget {
                   return Padding(
                     padding: const EdgeInsets.symmetric(
                         horizontal: 16.0, vertical: 16.0),
-                    child: Image.asset('data-repo/img/bg1.jpg')
+                    child: Image.asset(
+                      'data-repo/img/bg1.jpg',
+                      fit: BoxFit.fill,
+                    ),
                   );
                 },
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
+                  childAspectRatio: 2 / 3,
                 ),
               )),
         ),
