@@ -19,7 +19,7 @@ class FlutFlix extends StatelessWidget {
             child: ListView.builder(
               itemBuilder: (BuildContext context, int index) {
                 return Padding(
-                  padding: const EdgeInsets.only(left: 20.0, top: 8.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
                   child: Card(
                     child: ListTile(
                       title: Text(
