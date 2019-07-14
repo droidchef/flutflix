@@ -18,9 +18,11 @@ class FlutFlix extends StatelessWidget {
             color: Colors.green,
             child: ListView.builder(
               itemBuilder: (BuildContext context, int index) {
-                return ListTile(
-                  title: Text(
-                    '$index ' + movies[index % 4],
+                return Card(
+                  child: ListTile(
+                    title: Text(
+                      '$index ' + movies[index % 4],
+                    ),
                   ),
                 );
               },
