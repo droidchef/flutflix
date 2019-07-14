@@ -23,6 +23,9 @@ class FlutFlix extends StatelessWidget {
                     title: Text(
                       '$index ' + movies[index % 4],
                     ),
+                    leading: CircleAvatar(
+                      child: Image.asset('data-repo/img/bg1.jpg'),
+                    ),
                   ),
                 );
               },
