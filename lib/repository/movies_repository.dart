@@ -1,3 +1,4 @@
+import 'package:flutflix/model/movies_result.dart';
 import 'package:http/http.dart' show Client;
 import 'dart:async';
 import 'dart:convert';
@@ -15,7 +16,8 @@ class MoviesRepository {
     String requestUrl = template.expand({"api_key": _apiKey});
     final response = await httpClient.get(requestUrl);
     if (response.statusCode == 200) {
-      print(jsonDecode(response.body));
+      var mr = MoviesResult.fromJson(json.decode(response.body));
+      print(mr.movies);
     } else {
       throw Exception('We couldn\'t fetch movies because of the error code ${response.statusCode}');
     }

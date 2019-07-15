@@ -13,7 +13,7 @@ class Movie {
 
     final String releaseDate;
 
-    final double voteAverage;
+    final String voteAverage;
 
     Movie(this.id, this.title, this.posterPath, this.backdropPath, this.overview, this.releaseDate, this.voteAverage);
 
@@ -24,8 +24,7 @@ class Movie {
         backdropPath = json['backdrop_path'],
         overview = json['overview'],
         releaseDate = json['release_date'],
-        voteAverage = json['vote_average'];
-        
+        voteAverage = json['vote_average'].toString();
     
     Map<String, dynamic> toJson() => 
     {
