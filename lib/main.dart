@@ -1,9 +1,9 @@
 import 'package:flutflix/model/movies_result.dart';
 import 'package:flutflix/repository/movies_repository.dart';
 import 'package:flutter/material.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 import 'model/movie.dart';
-import 'dart:async';
 
 void main() => runApp(FlutFlix());
 
@@ -53,14 +53,16 @@ class _MovieGridState extends State<MoviesGrid> {
   Widget build(BuildContext context) {
     return Container(
       child: GridView.builder(
+        itemCount: _movies.length,
         itemBuilder: (BuildContext context, int index) {
           return Padding(
             padding:
                 const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
-            child: Image.asset(
-              'data-repo/img/bg1.jpg',
-              fit: BoxFit.fill,
-            ),
+            child: FadeInImage.memoryNetwork(placeholder: kTransparentImage,
+             image: 'https://image.tmdb.org/t/p/w342${_movies[index].posterPath}',
+              fit: BoxFit.cover,
+               fadeInDuration: Duration(milliseconds: 200),
+               ),
           );
         },
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
