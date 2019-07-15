@@ -4,6 +4,8 @@ import 'dart:convert';
 
 class MoviesRepository {
 
+  Client httpClient = Client();
+  
 
 
   
