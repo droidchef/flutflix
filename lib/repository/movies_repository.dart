@@ -13,6 +13,7 @@ class MoviesRepository {
   void nowPlaying() {
     var template = UriTemplate("$_baseUrl/now_playing{?api_key}");
     String requestUrl = template.expand({"api_key": _apiKey});
+    final response = httpClient.get(requestUrl);
   }
 
   
