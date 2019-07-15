@@ -2,7 +2,7 @@ import 'movie.dart';
 
 class MoviesResult {
 
-  final List<dynamic> movies;
+  final List<Movie> movies;
   final int page;
   final int totalResults;
   final int totalPages;
@@ -13,5 +13,5 @@ class MoviesResult {
       : page = json['page'],
         totalResults = json['total_results'],
         totalPages = json['total_pages'],
-        movies = json['results'].map((result) => Movie.fromJson(result)).toList();
+        movies = (json['results'] as List).map((result) => Movie.fromJson(result)).toList();
 }
