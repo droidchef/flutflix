@@ -37,3 +37,12 @@ class FlutFlix extends StatelessWidget {
     );
   }
 }
+
+class MoviesGrid extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return null;
+  }
+
+}
