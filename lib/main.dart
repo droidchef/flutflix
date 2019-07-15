@@ -35,6 +35,19 @@ class MoviesGrid extends StatefulWidget {
 }
 
 class _MovieGridState extends State<MoviesGrid> {
+  var _moviesRepository = MoviesRepository();
+  var _movies = List<Movie>();
+
+  @override
+  void initState() {
+    super.initState();
+    _loadMovies();
+  }
+
+  void _loadMovies() async {
+    MoviesResult result = await _moviesRepository.nowPlaying();
+    _movies.addAll(result.movies);
+  }
   
   @override
   Widget build(BuildContext context) {
