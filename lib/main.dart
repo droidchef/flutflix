@@ -46,3 +46,13 @@ class MoviesGrid extends StatefulWidget {
   }
 
 }
+
+class _MovieGridState extends State<MoviesGrid> {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return null;
+  }
+
+}
+
