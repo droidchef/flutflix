@@ -38,6 +38,25 @@ class FlutFlix extends StatelessWidget {
   }
 }
 
+class Movie {
+
+    final int id;
+
+    final String title;
+    
+    final String posterPath;
+
+    final String backdropPath;
+
+    final String overview;
+
+    final String releaseDate;
+
+    final double voteAverage;
+
+    Movie(this.id, this.title, this.posterPath, this.backdropPath, this.overview, this.releaseDate, this.voteAverage);
+}
+
 class MoviesGrid extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
