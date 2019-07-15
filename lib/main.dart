@@ -1,4 +1,3 @@
-import 'package:flutflix/repository/movies_repository.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(FlutFlix());
@@ -7,9 +6,6 @@ class FlutFlix extends StatelessWidget {
   var movies = ['Alpha', 'Beta', 'Gamma', 'Delta'];
   @override
   Widget build(BuildContext context) {
-
-    var mr = MoviesRepository();
-    mr.nowPlaying();
 
     return MaterialApp(
       title: 'FlutFlix',
